@@ -1,0 +1,51 @@
+# String variable
+name: Sunny Singh
+fruit: "mango"
+job: "devops engg"
+
+# write a single line in multiples lines
+message: >
+ this is
+ a single line
+ when consumed by compiler
+
+#  taking in messages with new line and stuff
+bio: >
+  sunny is a developer and
+  he likes to learn about technologies
+  and one day have his own startup
+
+# number types
+number: 45666
+marks: 45.33
+
+# boolean
+booleanValue: No # n,N,false, FALSE
+# same for true: t,T, true, TRUE
+
+# specify the type of value
+zero: !!int 0
+positiveNumber: !!int 45
+negativeNumber: !!int -45
+binaryNum: !!int 011101
+octalNum: !!int 06574
+hexaNum: !!int 0x45
+#540,000
+commaValue: +540_000
+
+# floating point numbers
+marks_i: !!float 49.50
+infinity: !!float .inf
+not_a_num: .nan
+
+# null
+surname: !!null Null # we could use--> null, Null, or ~
+~: this is a null key
+
+# date and time
+birthday: !!timestamp '2020-10-11'
+timeoftheday: '2023-02-07T08:30:00Z'
+
+
+
+

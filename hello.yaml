@@ -1,0 +1,25 @@
+"apple": "I am a red fruit"
+1: "This is sunny's roll number"
+
+
+# list and here apple and Apple are different as YAML is case sensitive
+---
+- apple
+- Apple
+- mango
+- banana
+
+
+# block style
+
+---
+cities:
+  - New York
+  - Washington
+  - Toronto
+  - Seattle
+---
+# We could this as well
+cities: [New York, Washington, Toronto, Seattle]
+# we give ... to end the document
+...

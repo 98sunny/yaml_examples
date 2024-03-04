@@ -1,0 +1,101 @@
+---
+fruit_detail: seq
+ -mango
+ -yellow color
+ -sweet taste
+---
+student: !!seq
+- marks: 20
+- name: Mark
+- gender: male
+- roll: 1sj15cs330
+
+---
+cities: [Toronto, Boston, Washington, Paris]
+
+---
+# Some of the key of the seq will be empty
+# sparse seq
+sparse seq:
+ -hey
+ -how
+ -
+ - Null
+ - sup
+---
+#  Nested Sequence
+-fruits
+  - mango
+  - apple
+  - pineapple
+  - guava
+-vegetables
+  - cucumbers
+  - pumpkin
+  - beets
+  - onion
+
+---
+# Key value pairs are called map
+map:
+  - key1: value1
+  - key2: value2
+  - key3: value3
+
+# nested mapping : map within maps
+name: sunny
+role: 
+ -SDE
+ -DevOps engg
+ -SWE
+---
+# same as
+name: sunny
+role: {age: 26, job: student}
+---
+# pair data types
+# pair: keys may have duplicate values
+# !!pairs
+pair example: !!pairs
+ - job: student
+ - job: teacher
+ - job: developer
+#  This will be a hash table which will be in a form of array
+# same as
+# pair example: !!pairs [job: student, job: student]
+# !!set will allow us to  have unique values
+names: !!set
+ ? Kunal
+ ? Sunny
+ ? Johnny
+
+#  nested sequence
+people : !!omap
+ - Sunny:
+      name: Sunny Singh
+      age: 26
+      height: 4ft
+ - Rahul:
+      name: Rahul Kumar
+      age: 35
+      height: 6ft
+
+# ReUsing properties using anchors
+likings: &likes
+  fav fruit: mango
+  dislikes: grapes
+
+person1:
+  name: Danny Daniel
+  <<: *likes
+
+person2:
+  name: Danny Daniel
+  <<: *likes
+  dislikes: berries
+
+person3:
+  name: Danny Daniel
+  <<: *likes
+  
+
